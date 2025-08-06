@@ -1,10 +1,16 @@
+'use client';
+
 import Avatar from "@/app/(home)/components/Avatar";
 import Link from "next/link";
 import { RainbowButton } from "./ui/rainbow-button";
 import { Link as ScrollLink } from 'react-scroll';
 import { bricolage_grotesque, inter } from "@/utils/fonts";
+import { useState } from 'react';
+import ResumeDialog from './ResumeDialog';
 
 export default function HeroSection() {
+    const [isResumeOpen, setIsResumeOpen] = useState(false);
+
     return (
         <div className="w-full flex justify-center py-5 pt-44 dark:bg-black">
             <div className="w-2/3 max-sm:w-full flex flex-col items-center">
@@ -20,17 +26,21 @@ export default function HeroSection() {
                         If you’re working on something real, let’s talk.
                     </h1>
                 </div>
-                <div className="mt-8 flex gap-4">
+                <div className="mt-8 flex gap-4 flex-wrap justify-center">
                     <Link href="#" target='_blank'>
                         <RainbowButton>
                             Book a meet
                         </RainbowButton>
                     </Link>
+                    <RainbowButton onClick={() => setIsResumeOpen(true)}>
+                        Preview Resume
+                    </RainbowButton>
                     <RainbowButton>
                         <ScrollLink to="contact-section" activeClass="active" smooth={true} offset={-120} duration={1100}>Get in touch</ScrollLink>
                     </RainbowButton>
                 </div>
             </div>
+            <ResumeDialog isOpen={isResumeOpen} onClose={() => setIsResumeOpen(false)} />
         </div>
     )
 }
