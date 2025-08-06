@@ -14,18 +14,22 @@ interface DarkModeProviderProps {
 }
 
 const DarkModeProvider: React.FC<DarkModeProviderProps> = ({ children }) => {
-    const [isDarkMode, setIsDarkMode] = useState<boolean | null>(false);
+    const [isDarkMode, setIsDarkMode] = useState<boolean | null>(null);
 
     useEffect(() => {
+        // Check if dark class is already applied by the script
+        const isDark = document.documentElement.classList.contains('dark');
+        setIsDarkMode(isDark);
+        
+        // Store the preference if not already stored
         const storedPreference = localStorage.getItem("theme");
-        const prefersDarkMode = storedPreference === "dark";
-
-        setIsDarkMode(prefersDarkMode);
-
-        if (prefersDarkMode) {
-            document.documentElement.classList.add("dark");
-        } else {
-            document.documentElement.classList.remove("dark");
+        if (!storedPreference) {
+            // Default to dark theme for new users
+            localStorage.setItem("theme", "dark");
+            if (!isDark) {
+                document.documentElement.classList.add("dark");
+                setIsDarkMode(true);
+            }
         }
         
         document.documentElement.style.overflowY = 'auto';

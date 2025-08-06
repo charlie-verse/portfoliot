@@ -1,26 +1,53 @@
 "use client"
 
-import { Badge, Tooltip } from '@radix-ui/themes'
 import React from 'react'
 import { bricolage_grotesque } from '@/utils/fonts'
 import Title from './ui/Title'
+import { motion } from 'framer-motion'
+import { useDarkMode } from '@/hooks/useDarkMode'
+import { SkillButton } from './ui/skill-button'
 
 const Skills = () => {
+  const { isDarkMode } = useDarkMode();
+  
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.05
+      }
+    }
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0 }
+  };
+
   return (
     <div className='w-2/3 max-lg:w-full max-sm:w-full flex flex-col items-center mt-4 pb-8'>
       <Title title='Skills' />
 
-      <div className="flex w-full flex-col max-lg:flex-row max-sm:flex-row gap-3 max-sm:gap-2 lg:flex-row mt-4 px-40 max-[1285px]:px-24 max-lg:px-28 max-sm:px-6 flex-wrap justify-center items-center max-sm:ml-">
+      <motion.div 
+        className="flex w-full flex-row gap-3 max-sm:gap-2 mt-6 px-40 max-[1285px]:px-24 max-lg:px-28 max-sm:px-6 flex-wrap justify-center items-center"
+        variants={container}
+        initial="hidden"
+        animate="show"
+      >
         {
           data.map((skill, idx) => (
-            <Tooltip key={idx} content={skill}>
-              <Badge color="gray" variant="solid" highContrast className={`text-xs max-sm:text-[10px] dark:hover:bg-gray-300 py-1 px-2 cursor-pointer hover:bg-gray-800 ${bricolage_grotesque}`}>
+            <motion.div key={idx} variants={item}>
+              <SkillButton 
+                gradientColor={isDarkMode ? 'rgba(0, 0, 0, 0.3)' : 'rgba(255, 255, 255, 0.5)'}
+                className={bricolage_grotesque}
+              >
                 {skill}
-              </Badge>
-            </Tooltip>
+              </SkillButton>
+            </motion.div>
           ))
         }
-      </div>
+      </motion.div>
     </div>
   )
 }
@@ -28,4 +55,4 @@ const Skills = () => {
 
 export default Skills;
 
-const data: string[] = ["JavaScript", "TypeScript", "Next.js", "React", "Prisma", "MongoDB", "PostgreSQL", "Supabase", "MySQL", "Turborepo", "Docker", "AWS", "Redux", "Tailwind CSS", "Node.js", "Express,js", "Git"];
+const data: string[] = ["JavaScript", "TypeScript", "Next.js", "React", "Prisma", "MongoDB", "PostgreSQL", "Supabase", "MySQL", "Turborepo", "Docker", "AWS", "Redux", "Tailwind CSS", "Node.js", "Express.js", "Git"];

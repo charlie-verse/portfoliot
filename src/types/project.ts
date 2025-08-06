@@ -27,7 +27,8 @@ export interface I_Experience {
     company_name: string,
     duration: string,
     job_title: string,
-    description: string
+    description: string,
+    bullets?: string[]
 }
 
 export interface DarkModeContextType {

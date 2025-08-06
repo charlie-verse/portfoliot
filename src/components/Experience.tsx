@@ -17,25 +17,39 @@ const Experience = () => {
             </span>
             {
                 experienceData.map((exp: I_Experience, idx) => (
-                    <MagicCard key={idx} className="cursor-pointer h-fit dark:shadow-2xl !bg-transparent border-none" gradientColor={`${isDarkMode ? '#262626' : 'rgba(197, 241, 241, 0.4)'}`}>
-                        <div className={`${exp.job_title === "Freelance" ? 'max-sm:ml-1 max-lg:ml-1' : ''} flex w-full px-5 max-sm:px-0 max-sm:pr-1 py-3`}>
-                            <div className="w-24 flex items-center justify-center">
-                                <Link href={exp.company_link} target='_blank'>
-                                    <Image src={exp.company_logo} alt='company-logo' width={50} height={50} className='rounded-full' />
+                    <MagicCard key={idx} className="cursor-pointer h-fit dark:shadow-2xl !bg-transparent border-none w-full !block" gradientColor={`${isDarkMode ? '#262626' : 'rgba(197, 241, 241, 0.4)'}`}>
+                        <div className="px-5 py-4 max-sm:px-3">
+                            <div className="flex items-start gap-4">
+                                <Link href={exp.company_link} target='_blank' className="flex-shrink-0">
+                                    <Image src={exp.company_logo} alt='company-logo' width={45} height={45} className='rounded-full' />
                                 </Link>
-                            </div>
-                            <div className="w-full">
-                                <div className={`${exp.job_title === "Freelance" ? 'max-sm:ml-2 max-lg:ml-2' : ''}`}>
-                                    <div className={`flex w-[41vw] max-lg:w-full max-sm:w-full !justify-between max-sm:items-center ${bricolage_grotesque}`}>
-                                        <div className='text-lg !leading-4 mb-1 max-sm:text-base font-semibold'>{exp.job_title}</div>
-                                        <div className={`text-xs max-sm:text-[10px] max-sm:hidden`}>{exp.duration}</div>
+                                <div className="flex-1">
+                                    <div className="flex justify-between items-start gap-4">
+                                        <div className="flex-1 min-w-0">
+                                            <h3 className={`text-lg font-semibold leading-tight ${bricolage_grotesque}`}>{exp.job_title}</h3>
+                                            <p className={`text-sm text-gray-600 dark:text-gray-400 mt-0.5 ${inter}`}>{exp.company_name}</p>
+                                        </div>
+                                        <span className={`text-xs text-gray-500 dark:text-gray-400 flex-shrink-0 whitespace-nowrap ${inter}`}>
+                                            {exp.duration}
+                                        </span>
                                     </div>
-                                    <h2 className={`text-sm max-sm:text-xs ${inter}`}>{exp.company_name}</h2>
-                                    <h2 className={`text-sm max-sm:text-[10px] hidden max-sm:block mt-1 ${inter}`}>{exp.duration}</h2>
                                 </div>
-                                <div className="mt-3 max-sm:mt-2 text-sm max-sm:text-[11px]">
-                                    <p>{exp.description}</p>
-                                </div>
+                            </div>
+                            
+                            <div className="mt-3 ml-[61px] max-sm:ml-0">
+                                {exp.description && <p className="text-sm text-gray-600 dark:text-gray-400">{exp.description}</p>}
+                                {exp.bullets && exp.bullets.length > 0 && (
+                                    <ul className="space-y-2 mt-3">
+                                        {exp.bullets.map((bullet, bulletIdx) => (
+                                            <li key={bulletIdx} className="flex items-start gap-2">
+                                                <span className="text-purple-500 dark:text-purple-400 mt-1 text-xs flex-shrink-0">▸</span>
+                                                <span className="text-gray-600 dark:text-gray-400 leading-relaxed text-[13px] max-sm:text-xs">
+                                                    {bullet}
+                                                </span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                )}
                             </div>
                         </div>
                     </MagicCard>

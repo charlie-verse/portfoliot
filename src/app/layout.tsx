@@ -8,6 +8,7 @@ import { Analytics } from '@vercel/analytics/react';
 import './globals.css'
 import ConditionalFooter from "./ConditionalFooter";
 import Provider from "@/context/Provider";
+import { ThemeScript } from "@/components/ThemeScript";
 
 export const metadata: Metadata = {
   title: "fardeen",
@@ -42,10 +43,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <Provider>
-        <DarkModeProvider>
-          <body className={`bg-white dark:bg-black`}>
+    <html lang="en" className="dark" suppressHydrationWarning>
+      <head>
+        <ThemeScript />
+      </head>
+      <body className={`bg-white dark:bg-black`} suppressHydrationWarning>
+        <Provider>
+          <DarkModeProvider>
             <Toaster position='bottom-right' />
             <Theme className="dark:!bg-black">
               <Navbar />
@@ -53,9 +57,9 @@ export default function RootLayout({
               <Analytics />
               <ConditionalFooter />
             </Theme>
-          </body>
-        </DarkModeProvider>
-      </Provider>
+          </DarkModeProvider>
+        </Provider>
+      </body>
     </html>
   );
 }

@@ -9,7 +9,7 @@ import InitialLanding from "./components/InitialLanding"
 
 export default function Home() {
   return (
-    <div className="max-[350px]:overflow-hidden mt-8 max-sm:mt-0">
+    <main className="max-[350px]:overflow-hidden mt-8 max-sm:mt-0">
       <InitialLanding />
 
 
@@ -39,6 +39,6 @@ export default function Home() {
       <div className="w-full flex justify-center mt-8" id="contact-section">
         <Contact />
       </div>
-    </div>
+    </main>
   )
 }
