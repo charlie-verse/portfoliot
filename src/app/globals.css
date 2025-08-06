@@ -108,4 +108,10 @@ main {
   body {
     @apply bg-background text-foreground;
   }
+  
+  /* Ensure no gaps when modal is open */
+  body:has(.fixed[class*="bg-black/50"]) {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
 }

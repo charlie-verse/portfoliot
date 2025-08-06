@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { X, Download } from 'lucide-react';
 import { bricolage_grotesque, inter } from '@/utils/fonts';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -11,6 +11,19 @@ interface ResumeDialogProps {
 }
 
 const ResumeDialog: React.FC<ResumeDialogProps> = ({ isOpen, onClose }) => {
+  // Handle body overflow when modal is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
   const handleDownload = () => {
     const link = document.createElement('a');
     link.href = '/resume.pdf';
@@ -76,6 +89,7 @@ const ResumeDialog: React.FC<ResumeDialogProps> = ({ isOpen, onClose }) => {
             exit={{ opacity: 0 }}
             onClick={onClose}
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[100]"
+            style={{ top: '-40px', height: 'calc(100% + 40px)' }}
           />
           
           {/* Dialog */}
