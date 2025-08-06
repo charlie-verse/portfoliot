@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Theme } from "@radix-ui/themes";
 import '@radix-ui/themes/styles.css';
-import Navbar from "@/components/Navbar";
+import NavbarWithResume from "@/components/NavbarWithResume";
 import DarkModeProvider from "@/context/DarkModeContext";
 import { Toaster } from "sonner";
 import { Analytics } from '@vercel/analytics/react';
@@ -52,7 +52,7 @@ export default function RootLayout({
           <DarkModeProvider>
             <Toaster position='bottom-right' />
             <Theme className="dark:!bg-black">
-              <Navbar />
+              <NavbarWithResume />
               {children}
               <Analytics />
               <ConditionalFooter />
