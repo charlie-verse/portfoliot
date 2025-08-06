@@ -99,7 +99,7 @@ const ResumeDialog: React.FC<ResumeDialogProps> = ({ isOpen, onClose }) => {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-[101] flex items-start justify-center p-4 pt-20 overflow-y-auto"
+            className="fixed inset-0 z-[101] flex items-start justify-center p-4 pt-28 overflow-y-auto"
           >
             <div className="bg-white dark:bg-black border dark:border-white/20 rounded-xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-hidden">
               {/* Header */}
