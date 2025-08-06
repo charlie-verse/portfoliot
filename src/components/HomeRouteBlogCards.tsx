@@ -20,7 +20,7 @@ export default function HomeRouteBlogCards({ title, id, createdAt }: Blog) {
     return (
         <Link href={`/blogs/${id}`} className="w-full" prefetch={true}>
             <MagicCard 
-                className="cursor-pointer h-fit dark:shadow-2xl !bg-transparent border-none w-full my-3" 
+                className="cursor-pointer h-fit dark:shadow-2xl !bg-transparent border-none w-full my-1"
                 gradientColor={`${isDarkMode ? '#262626' : 'rgba(197, 241, 241, 0.4)'}`}
             >
                 <div className={`flex flex-col justify-start items-start w-full px-5 py-4 ${bricolage_grotesque}`}>
