@@ -9,9 +9,9 @@ export const experienceData: I_Experience[] = [
         job_title: "Add-On Developer",
         description: "",
         bullets: [
-            "Developed and maintained Adobe Creative Cloud add-ons using CEP (Common Extensibility Platform) and UXP frameworks",
-            "Collaborated with design teams to implement user-friendly interfaces for Photoshop and Illustrator extensions",
-            "Optimized plugin performance resulting in 40% faster load times and improved user experience for 10K+ users"
+            "Developed and maintained Adobe Creative Cloud add-ons using *CEP* (Common Extensibility Platform) and *UXP* frameworks",
+            "Collaborated with design teams to implement user-friendly interfaces for *Photoshop* and *Illustrator* extensions",
+            "Optimized plugin performance resulting in *40% faster* load times and improved user experience for *10K+ users*"
         ]
     },
     {
@@ -22,9 +22,9 @@ export const experienceData: I_Experience[] = [
         job_title: "Full Stack Developer",
         description: "",
         bullets: [
-            "Built and deployed scalable news aggregation platform using Next.js, Node.js, and PostgreSQL",
-            "Implemented real-time data processing pipeline handling 100K+ articles daily with Redis caching",
-            "Led frontend development initiatives, improving site performance metrics by 35% and SEO rankings"
+            "Built and deployed scalable news aggregation platform using *Next.js*, *Node.js*, and *PostgreSQL*",
+            "Implemented real-time data processing pipeline handling *100K+ articles* daily with Redis caching",
+            "Led frontend development initiatives, improving site performance metrics by *35%* and SEO rankings"
         ]
     }
     // ,

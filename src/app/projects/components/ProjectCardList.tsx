@@ -56,12 +56,12 @@ const data: Project[] = [
   {
     logo: '/saloon-5.png',
     title: "Enrich Salon Management",
-    description: "Full-stack salon management system with integrated booking, payment processing, and comprehensive admin dashboard.",
+    description: "Full-stack salon management system with integrated *booking*, *payment processing*, and comprehensive *admin dashboard*.",
     bullets: [
-      "Built complete booking system with calendar integration, service selection, and real-time availability checking",
-      "Integrated Razorpay payment gateway processing 500+ transactions monthly with automated invoice generation",
-      "Developed admin dashboard with revenue analytics, customer insights, and appointment management features",
-      "Implemented automated email notifications using Nodemailer for booking confirmations and reminders"
+      "Built complete booking system with calendar integration, service selection, and *real-time* availability checking",
+      "Integrated *Razorpay* payment gateway processing *500+ transactions* monthly with automated invoice generation",
+      "Developed admin dashboard with *revenue analytics*, customer insights, and appointment management features",
+      "Implemented automated email notifications using *Nodemailer* for booking confirmations and reminders"
     ],
     techStack: ["React", "MUI", "Tailwind CSS", "Razorpay", "Nodemailer", "React Charts", "Node.js", "Express.js", "MongoDB"],
     link: "https://enrich-salon.fardeen.tech",
@@ -70,12 +70,12 @@ const data: Project[] = [
   {
     logo: '/flick-ai.png',
     title: "Flick.AI",
-    description: "AI-powered Twitter content enhancement tool serving 200+ active users with customizable tweet optimization.",
+    description: "AI-powered Twitter content enhancement tool serving *200+ active users* with customizable tweet optimization.",
     bullets: [
-      "Engineered AI-driven content analysis using Google Gemini API to enhance tweet engagement by 40%",
-      "Built real-time preview system with character counting, hashtag suggestions, and sentiment analysis",
-      "Implemented user authentication and personalized writing style profiles using NextAuth and Prisma",
-      "Achieved 95% user satisfaction rate with custom tone adjustment and content variation features"
+      "Engineered AI-driven content analysis using *Google Gemini API* to enhance tweet engagement by *40%*",
+      "Built *real-time preview* system with character counting, hashtag suggestions, and sentiment analysis",
+      "Implemented user authentication and personalized writing style profiles using *NextAuth* and *Prisma*",
+      "Achieved *95% user satisfaction* rate with custom tone adjustment and content variation features"
     ],
     techStack: ["Next.js", "TypeScript", "Google Gemini", "Prisma", "PostgreSQL", "NextAuth", "Tailwind CSS"],
     link: "https://flick-ai.fardeen.tech/",

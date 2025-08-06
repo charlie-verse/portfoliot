@@ -7,6 +7,7 @@ import { bricolage_grotesque, inter } from '@/utils/fonts';
 import Title from './ui/Title';
 import { useDarkMode } from '@/hooks/useDarkMode';
 import { experienceData } from '@/utils/constant';
+import { parseHighlightedText } from '@/utils/parseHighlightedText';
 
 const Experience = () => {
     const { isDarkMode } = useDarkMode();
@@ -44,7 +45,7 @@ const Experience = () => {
                                             <li key={bulletIdx} className="flex items-start gap-2">
                                                 <span className="text-purple-500 dark:text-purple-400 mt-1 text-xs flex-shrink-0">▸</span>
                                                 <span className="text-gray-600 dark:text-gray-400 leading-relaxed text-[13px] max-sm:text-xs">
-                                                    {bullet}
+                                                    {parseHighlightedText(bullet)}
                                                 </span>
                                             </li>
                                         ))}

@@ -7,6 +7,7 @@ import { bricolage_grotesque, inter } from '@/utils/fonts'
 import { GitHubLogoIcon, GlobeIcon } from '@radix-ui/react-icons'
 import { Badge, Link } from '@radix-ui/themes'
 import Image from 'next/image'
+import { parseHighlightedText } from '@/utils/parseHighlightedText'
 
 const ProjectCard = (props: Project) => {
     const { isDarkMode } = useDarkMode()
@@ -23,7 +24,7 @@ const ProjectCard = (props: Project) => {
                                 <Link href={props.link ? props.link : props.source} target='_blank' underline='none'>
                                     <h3 className={`text-lg font-semibold leading-tight hover:underline ${bricolage_grotesque}`}>{props.title}</h3>
                                 </Link>
-                                <p className={`text-sm text-gray-600 dark:text-gray-400 mt-1 ${inter}`}>{props.description}</p>
+                                <p className={`text-sm text-gray-600 dark:text-gray-400 mt-1 ${inter}`}>{parseHighlightedText(props.description)}</p>
                             </div>
                         </div>
                     </div>
@@ -36,7 +37,7 @@ const ProjectCard = (props: Project) => {
                                 <li key={bulletIdx} className="flex items-start gap-2">
                                     <span className="text-purple-500 dark:text-purple-400 mt-1 text-xs flex-shrink-0">▸</span>
                                     <span className="text-gray-600 dark:text-gray-400 leading-relaxed text-[13px] max-sm:text-xs">
-                                        {bullet}
+                                        {parseHighlightedText(bullet)}
                                     </span>
                                 </li>
                             ))}
