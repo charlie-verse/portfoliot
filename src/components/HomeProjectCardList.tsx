@@ -19,7 +19,7 @@ const HomeProjectCardList = () => {
     <div className='w-full h-fit px-64 max-[1025px]:px-4 max-[1285px]:px-40 max-lg:px-0 max-sm:px-4 flex flex-col items-center mt-4 pb-8'>
       <Title title='Proof of Work' />
 
-      <div className="flex w-full flex-col gap-4 lg:flex-row mt-4 px-32 max-lg:px-0 max-sm:px-0 flex-wrap items-center ml-14 max-sm:ml-0 max-lg:ml-0 max-[350px]:mr-5 max-[321px]:mr-10">
+      <div className="flex w-full flex-col gap-4 lg:flex-row mt-4 px-32 max-lg:px-8 max-md:px-4 max-sm:px-0 flex-wrap items-center ml-14 max-sm:ml-0 max-lg:ml-0 max-[350px]:mr-5 max-[321px]:mr-10 max-[1366px]:px-16 max-[1366px]:ml-8">
         {data.slice(0, visibleProjects).map((project: Project, idx: number) => (
           <HomeProjectCard
             key={idx}
