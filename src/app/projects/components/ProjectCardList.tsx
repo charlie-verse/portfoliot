@@ -20,7 +20,7 @@ const ProjectCardList = () => {
     <div className='w-full flex flex-col items-center mt-4 pb-8'>
       <div className='w-1/2 max-lg:w-full max-lg:px-20 max-sm:w-full max-sm:px-5 flex flex-col items-center'>
         <span className='mb-3'>
-          <Title title='Projects' />
+          <Title title='Proof of Work' />
         </span>
 
         <div className="w-full flex flex-col gap-1">
