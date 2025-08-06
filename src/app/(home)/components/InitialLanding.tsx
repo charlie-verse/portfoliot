@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import HeroSection from "@/components/HeroSection"
-import ProjectCardList from "@/app/projects/components/ProjectCardList"
+import HomeProjectCardList from "@/components/HomeProjectCardList"
 
 export default function InitialLanding() {
     return (
@@ -15,7 +15,7 @@ export default function InitialLanding() {
             <HeroSection />
 
             <div className="w-full flex justify-center mt-52 max-sm:mt-20">
-                <ProjectCardList />
+                <HomeProjectCardList />
             </div>
         </motion.div>
     )

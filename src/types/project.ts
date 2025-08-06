@@ -4,7 +4,8 @@ export type Project = {
     description: string,
     techStack?: string[],
     link?: string,
-    source?: string
+    source?: string,
+    bullets?: string[]
 };
 
 export interface I_Heading {
