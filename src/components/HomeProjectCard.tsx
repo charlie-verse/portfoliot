@@ -12,8 +12,8 @@ import Image from 'next/image'
 const HomeProjectCard = (props: Project) => {
     const { isDarkMode } = useDarkMode()
     return (
-        <MagicCard className="cursor-pointer rounded-lg dark:shadow-2xl w-[45%] max-sm:w-full h-[310px] border-none !bg-transparent" gradientColor={`${isDarkMode ? '#262626' : 'rgba(197, 241, 241, 0.4)'}`}>
-            <ShineBorder className={`border h-full w-full relative rounded-lg flex flex-col justify-center items-start md:shadow-xl !bg-transparent !pointer-events-none`} color={["#FF9933", "#FFFFFF", "#138808"]}>
+        <MagicCard className="cursor-pointer rounded-lg dark:shadow-2xl w-[45%] max-sm:w-full h-[310px] border-none !bg-transparent" gradientColor={`${isDarkMode ? '#1a1a1a' : 'rgba(200, 200, 200, 0.3)'}`}>
+            <ShineBorder className={`border h-full w-full relative rounded-lg flex flex-col justify-center items-start md:shadow-xl !bg-transparent !pointer-events-none`} color={isDarkMode ? ["#3b82f6", "#8b5cf6", "#06b6d4"] : ["#60a5fa", "#a78bfa", "#67e8f9"]}>
 
                 <div className='px-3'>
                     <Image src={props.logo} alt='project-logo' width={30} height={30} />
