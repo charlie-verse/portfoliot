@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import { X, Download } from 'lucide-react';
 import { bricolage_grotesque, inter } from '@/utils/fonts';
 import { motion, AnimatePresence } from 'framer-motion';
+import { parseHighlightedText } from '@/utils/parseHighlightedText';
 
 interface ResumeDialogProps {
   isOpen: boolean;
@@ -40,16 +41,16 @@ const ResumeDialog: React.FC<ResumeDialogProps> = ({ isOpen, onClose }) => {
     // phone: "+91 9876543210",
     // linkedin: "linkedin.com/in/fardeenmansoori",
     // github: "github.com/Fardeen26",
-    summary: "Passionate Full Stack Developer with expertise in building scalable web applications. Experienced in React, Node.js, and cloud technologies. Proven track record of delivering high-quality software solutions and leading cross-functional teams to achieve project goals.",
+    summary: "Passionate *Full Stack Developer* with expertise in building *scalable web applications*. Experienced in *React*, *Node.js*, and *cloud technologies*. Proven track record of delivering high-quality software solutions and leading cross-functional teams to achieve project goals.",
     experience: [
       {
         title: "Add-On Developer",
         company: "Adobe",
         period: "2024 - 2025",
         bullets: [
-          "Developed and maintained Adobe Creative Cloud add-ons using CEP and UXP frameworks",
-          "Collaborated with design teams to implement user-friendly interfaces for Photoshop and Illustrator extensions",
-          "Optimized plugin performance resulting in 40% faster load times and improved user experience for 10K+ users"
+          "Developed and maintained Adobe Creative Cloud add-ons using *CEP* and *UXP* frameworks",
+          "Collaborated with design teams to implement *user-friendly interfaces* for Photoshop and Illustrator extensions",
+          "Optimized plugin performance resulting in *40% faster load times* and improved user experience for *10K+ users*"
         ]
       },
       {
@@ -57,9 +58,9 @@ const ResumeDialog: React.FC<ResumeDialogProps> = ({ isOpen, onClose }) => {
         company: "Inagiffy",
         period: "2023 - 2024",
         bullets: [
-          "Built and deployed scalable news aggregation platform using Next.js, Node.js, and PostgreSQL",
-          "Implemented real-time data processing pipeline handling 100K+ articles daily with Redis caching",
-          "Led frontend development initiatives, improving site performance metrics by 35% and SEO rankings"
+          "Built and deployed scalable news aggregation platform using *Next.js*, *Node.js*, and *PostgreSQL*",
+          "Implemented *real-time data processing* pipeline handling *100K+ articles daily* with Redis caching",
+          "Led frontend development initiatives, improving site performance metrics by *35%* and *SEO rankings*"
         ]
       }
     ],
@@ -145,7 +146,7 @@ const ResumeDialog: React.FC<ResumeDialogProps> = ({ isOpen, onClose }) => {
                   <div className="mb-8">
                     <h2 className={`text-xl font-semibold mb-3 ${bricolage_grotesque}`}>Professional Summary</h2>
                     <p className={`text-gray-600 dark:text-gray-400 leading-relaxed ${inter}`}>
-                      {resumeData.summary}
+                      {parseHighlightedText(resumeData.summary)}
                     </p>
                   </div>
                   
@@ -164,7 +165,7 @@ const ResumeDialog: React.FC<ResumeDialogProps> = ({ isOpen, onClose }) => {
                         <ul className="list-disc list-inside space-y-1 ml-4">
                           {exp.bullets.map((bullet, bulletIdx) => (
                             <li key={bulletIdx} className={`text-gray-600 dark:text-gray-400 text-sm leading-relaxed ${inter}`}>
-                              {bullet}
+                              {parseHighlightedText(bullet)}
                             </li>
                           ))}
                         </ul>
