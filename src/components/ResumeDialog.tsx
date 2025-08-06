@@ -285,7 +285,7 @@ const ResumeDialog: React.FC<ResumeDialogProps> = ({ isOpen, onClose }) => {
                         </span>
                       </div>
                       <div>
-                        <span className={`font-medium ${inter}`}>AI/ML:</span>
+                        <span className={`font-medium ${inter}`}>GenAi:</span>
                         <span
                           className={`text-gray-600 dark:text-gray-400 ml-2 ${inter}`}
                         >

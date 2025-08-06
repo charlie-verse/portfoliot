@@ -3,6 +3,8 @@
 import React, { useState } from 'react'
 import { Link } from '@radix-ui/themes'
 import { FaXTwitter } from "react-icons/fa6";
+import { HiMail } from "react-icons/hi";
+import { FaLinkedinIn } from "react-icons/fa";
 import { bricolage_grotesque } from '@/utils/fonts';
 import { Input } from "@/components/ui/input"
 import { Textarea } from './ui/textarea';
@@ -71,9 +73,21 @@ const Contact = () => {
                         </button>
                     </Link>
 
-                    <Link href="https://x.com/messages/compose?recipient_id=1360908019584835588" target="_blank">
+                    <Link href="mailto:kushal0213@gmail.com" target="_blank">
+                        <button className='bg-[#ff6347] text-white py-2 px-3 rounded-md flex items-center gap-2 text-sm max-sm:text-xs hover:bg-[#d33b2e]'>
+                            <HiMail className='h-[18px] w-[18px]' /> Mail me
+                        </button>
+                    </Link>
+
+                    {/* <Link href="https://x.com/messages/compose?recipient_id=1360908019584835588" target="_blank">
                         <button className='bg-[#1D9BF0] text-white py-2 px-3 rounded-md flex items-center gap-2 text-sm max-sm:text-xs hover:bg-[#2e7bae]'>
                             <FaXTwitter className='h-[18px] w-[18px]' /> Chat on Twitter
+                        </button>
+                    </Link> */}
+
+                    <Link href="https://www.linkedin.com/in/kushal-chandra-1b45b32a4/" target="_blank">
+                        <button className='bg-[#0077B5] text-white py-2 px-3 rounded-md flex items-center gap-2 text-sm max-sm:text-xs hover:bg-[#005885]'>
+                            <FaLinkedinIn className='h-[18px] w-[18px]' /> Connect on LinkedIn
                         </button>
                     </Link>
                 </div>
