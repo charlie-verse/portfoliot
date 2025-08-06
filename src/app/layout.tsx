@@ -11,29 +11,29 @@ import Provider from "@/context/Provider";
 import { ThemeScript } from "@/components/ThemeScript";
 
 export const metadata: Metadata = {
-  title: "fardeen",
-  description: "Fardeen Mansoori is a Full Stack Developer specializing in building impactful web applications from scratch. Explore his portfolio to see my projects and skills.",
-  keywords: "Fardeen Mansoori, Full Stack Developer, Web Developer, Portfolio, JavaScript, TypeScript, React, Node.js, software engineer",
-  authors: [{ name: "Fardeen Mansoori" }],
+  title: "Kushal",
+  description: "Kushal is a Software Developer specializing in building impactful web applications from scratch. Explore his portfolio to see my projects and skills.",
+  keywords: "Kushal, Software Developer, Web Developer, Portfolio, JavaScript, TypeScript, React, Node.js, software engineer",
+  authors: [{ name: "Kushal C" }],
   openGraph: {
-    title: "fardeen",
+    title: "kushal",
     description: "",
     url: "https://fardeen.tech",
-    siteName: "fardeen",
+    siteName: "kushal",
     images: [
       {
         url: "https://res.cloudinary.com/dl27j0qcm/image/upload/v1739721063/gradii-3840x2160_3_jqk2nt.png",
         width: 400,
         height: 200,
-        alt: "fardeen",
+        alt: "kushal",
       },
     ],
     type: "website",
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'fardeen',
-    creator: '@fardeentwt',
+    title: 'kushal',
+    creator: '@charlie_0513',
   },
 };
 

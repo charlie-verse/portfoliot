@@ -55,7 +55,7 @@ export default ProjectCardList;
 const data: Project[] = [
   {
     logo: '/saloon-5.png',
-    title: "Enrich Salon Management",
+    title: "Langsy AI Agent",
     description: "Full-stack salon management system with integrated *booking*, *payment processing*, and comprehensive *admin dashboard*.",
     bullets: [
       "Built complete booking system with calendar integration, service selection, and *real-time* availability checking",

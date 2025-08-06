@@ -58,12 +58,11 @@ export const experienceData: I_Experience[] = [
 
 export const educationData: I_Education[] = [
     {
-        institute_link: "https://www.uok.ac.in/",
+        institute_link: "https://www.bmsce.ac.in/",
         institute_logo: "/uok.gif",
-        course_title: "Bachelors of Computer Application",
-        ending_date: "Expected July 2025",
-        institute_name: "University of Kota",
-        cgpa: 8.5,
+        course_title: "Bachelor of Engineering in Computer Science",
+        ending_date: "2020-2024",
+        institute_name: "BMS College of Engineering",
         description: ""
     }
 ] 

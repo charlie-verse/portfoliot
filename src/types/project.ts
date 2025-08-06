@@ -18,7 +18,6 @@ export interface I_Education {
     course_title: string,
     ending_date: string,
     institute_name: string,
-    cgpa: number,
     description: string
 }
 
