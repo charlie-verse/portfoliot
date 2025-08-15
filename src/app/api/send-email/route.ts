@@ -16,16 +16,17 @@ export async function POST(req: NextRequest) {
 
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { data, error } = await resend.emails.send({
-      from: 'Kushal <onboarding@resend.dev>',
+      from: 'Portfolio Contact <noreply@resend.dev>',
       to: ['kushal0213@gmail.com'],
       subject: 'Message from Your Portfolio',
       react: EmailTemplate({ Email: email, Message: message }),
     });
 
     if (error) {
+      console.error('Resend API Error:', error);
       return NextResponse.json(
-        { success: false, message: `Something went wrong while sending email : ${error}` },
-        { status: 501 }
+        { success: false, message: `Something went wrong while sending email: ${error.message || error}` },
+        { status: 500 }
       );
     }
 
@@ -35,9 +36,10 @@ export async function POST(req: NextRequest) {
     );
 
   } catch (error) {
+    console.error('API Route Error:', error);
     return NextResponse.json(
-      { success: false, message: `Server error occurred : ${error}` },
-      { status: 501 }
+      { success: false, message: `Server error occurred: ${error instanceof Error ? error.message : String(error)}` },
+      { status: 500 }
     );
   }
 }

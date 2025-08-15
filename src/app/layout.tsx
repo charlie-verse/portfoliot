@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: "kushal",
     images: [
       {
-        url: "https://res.cloudinary.com/dl27j0qcm/image/upload/v1739721063/gradii-3840x2160_3_jqk2nt.png",
+        url: "https://res.cloudinary.com/dt44k2ead/image/upload/v1755275604/kushal_banner_wt6pgr.png",
         width: 400,
         height: 200,
         alt: "kushal",
