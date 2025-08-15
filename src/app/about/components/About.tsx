@@ -83,68 +83,74 @@ const data: I_About[] = [
     {
         year: 2025,
         events: [
-            "Building something new this year—stay tuned."
+            "Building something new this year—stay tuned. 🚀"
         ]
     },
     {
         year: 2024,
         events: [
-            "Dove deep into Web Development, mastered cutting-edge technologies and builded more the 20 projects. 🚀",
-            "Started my journey in Web3 development, creating decentralized applications and embracing blockchain technology. ⛓",
-            "Got funded by Adobe for an project and Proud of the progress I've made so far—each step has been a leap forward in my career."
+            "Graduated with a B.E. in Computer Science from BMS College of Engineering.",
+            "Published a research paper on road & animal accident prevention systems. 📄",
+            "Transitioned from frontend intern to contractor at a Web3 incubator startup—delivered 30+ NFT client projects serving 80k+ users for minting & staking."
         ]
     },
     {
         year: 2023,
         events: [
-            "Shifted focus from cricket due to family priorities, but gained clarity on my passion for technology.",
-            "Started my BCA journey without prior programming knowledge and quickly developed a love for coding. 🚀",
-            "Bought my first laptop and taught myself C programming and web development—sparking my passion for building software. 💻"
+            "Began Web3 journey as a moderator for Solana NFT projects → rose to community manager → project manager for 200k+ Discord users & $300k+/M in revenue.",
+            "Found deep passion for coding while solving real problems in the Web3 space.",
+            "Balanced college academics with delivering results in high-pressure startup environments. 💻"
         ]
     },
     {
         year: 2022,
         events: [
-            "Graduated from high school with a 90% score. 📜",
-            "Balanced academics while pursuing professional cricket, excelling in both fields."
+            "Built multiple AI-driven projects while actively exploring blockchain and decentralized technologies.",
+            "Created a prototype for a smart system integrating IoT & AI for safety automation.",
         ]
     },
     {
         year: 2021,
         events: [
-            "Faced setbacks due to the lockdown, which halted both my cricket career and studies, but found resilience and new paths during tough times. 😷"
+            "Deepened knowledge in core CS subjects while exploring Web2 and backend development.",
+            "Started applying coding skills to small-scale freelance and personal projects. 💡"
         ]
     },
     {
         year: 2020,
         events: [
-            "Completed 10th grade with 70%, marking a pivotal moment as I started playing professional cricket. 🏏"
+            "Cracked JEE Mains with 92 percentile but couldn’t clear JEE Advanced—redirected focus fully to computer science.",
+            "Completed pre-university education in science stream. 🎯",
+            "Joined BMS College of Engineering and began exploring Web development alongside academics.",
+            "Learned the value of persistence and resilience during a pivotal academic year. "
         ]
     },
     {
         year: 2019,
         events: [
-            "Like any curious engineer, I spent my teenage years exploring, tinkering, and experimenting with technology.",
-            "Built a makeshift motorcycle-style brake lighting system on my bicycle—my first DIY tech project. 🏍️"
+            "Became obsessed with solving C++ problems, consistently acing competitive coding challenges in college. 📚",
+            "Developed logical thinking and problem-solving speed through countless hours of coding practice."
         ]
     },
     {
-        year: 2017,
+        year: 2018,
         events: [
-            "Discovered computers for the first time in a cyber cafe—my gateway into the digital world. 💻",
-            "At the time, I only saw computers as gaming machines, but little did I know it would become my future."
+            "Finished school and became obsessed with solving C++ problems, consistently acing competitive coding challenges. 📚",
+            "Cybersecurity enthusiast, fascinated by ethical hacking and online security. 🔐",
+            "Started experimenting with online CTFs and security challenges."
+            
         ]
     },
     {
-        year: 2015,
+        year: 2016,
         events: [
-            "Started watching cricket and became an instant fan of a young Virat Kohli, sparking my passion for the sport. 🔥"
+            "First taste of tech curiosity through tinkering with gadgets and learning how things work—sparked the drive that shaped the rest of the journey. 💡"
         ]
     },
     {
-        year: 2005,
+        year: 2003,
         events: [
-            "The year I was born, the first future software engineer in the family! 👶🏼 🍼"
+            "The year I was born. 👶🏼 🍼"
         ]
     },
 ];
