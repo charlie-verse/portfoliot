@@ -4,17 +4,17 @@ import { Project } from '@/types/project';
 import ProjectCard from './ProjectCard';
 import Title from '@/components/ui/Title';
 import { useState } from 'react';
-import { ChevronDownIcon } from '@radix-ui/react-icons';
-import { Badge } from '@radix-ui/themes';
-import { bricolage_grotesque } from '@/utils/fonts';
+// import { ChevronDownIcon } from '@radix-ui/react-icons';
+// import { Badge } from '@radix-ui/themes';
+// import { bricolage_grotesque } from '@/utils/fonts';
 
 
 const ProjectCardList = () => {
   const [visibleProjects, setVisibleProjects] = useState(6);
 
-  const loadMoreProjects = () => {
-    setVisibleProjects((prev) => prev + 6);
-  };
+  // const loadMoreProjects = () => {
+  //   setVisibleProjects((prev) => prev + 6);
+  // };
 
   return (
     <div className='w-full flex flex-col items-center mt-4 pb-8'>

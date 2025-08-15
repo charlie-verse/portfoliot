@@ -12,7 +12,7 @@ export default function BlogHeader({ author, createdAt, readingTime }: BlogHeade
     return (
         <div className="mt-4 flex flex-wrap items-center gap-2">
             <Avatar
-                src="/space.jpeg"
+                src="/avatar.png"
                 fallback="A"
                 radius='full'
                 size='2'

@@ -5,7 +5,7 @@ const Avatar = () => {
   return (
     <Link href='https://www.linkedin.com/in/kushal-c-99028b250/' target='_blank'>
       <Picture
-        src='/space.jpeg'
+        src='/avatar.png'
         fallback="A"
         size='6'
         radius='full'

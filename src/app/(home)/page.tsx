@@ -3,7 +3,7 @@ import Experience from "@/components/Experience";
 import Education from "@/components/Education";
 import Contact from "@/components/Contact";
 // import GitGraph from "./components/GitGraph"
-import AddOnProjects from "@/components/AddOnProjects";
+// import AddOnProjects from "@/components/AddOnProjects";
 import HomeRouteBlogs from "@/components/HomeRouteBlogs";
 import InitialLanding from "./components/InitialLanding";
 

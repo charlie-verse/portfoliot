@@ -59,7 +59,7 @@ export const experienceData: I_Experience[] = [
 export const educationData: I_Education[] = [
     {
         institute_link: "https://www.bmsce.ac.in/",
-        institute_logo: "/uok.gif",
+        institute_logo: "/bms_logo.webp",
         course_title: "Bachelor of Engineering in Computer Science",
         ending_date: "2020-2024",
         institute_name: "BMS College of Engineering",
